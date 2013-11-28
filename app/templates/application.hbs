@@ -8,6 +8,9 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="#">Share</a>
+  {{#if isLoggedIn}}
+    <button {{action "logout"}}>Log Out</button>
+  {{/if}}
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,9 +28,6 @@
       </li>
     </ul>
   </div><!-- /.navbar-collapse -->
-{{#if isLoggedIn}}
-  <button {{action "logout"}}>Log Out</button>
-{{/if}}
 </nav>
 
 {{outlet}}
