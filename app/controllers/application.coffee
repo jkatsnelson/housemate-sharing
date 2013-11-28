@@ -12,5 +12,4 @@ module.exports = App.ApplicationController = Ember.ObjectController.extend
       savedTransition: null
       isLoggedIn: true
 
-
-  logout: ->  @set 'isLoggedIn', false
+  logUserOut: ->  @set 'isLoggedIn', false

@@ -25,5 +25,9 @@
       </li>
     </ul>
   </div><!-- /.navbar-collapse -->
+{{#if isLoggedIn}}
+  <button {{action "logout"}}>Log Out</button>
+{{/if}}
 </nav>
+
 {{outlet}}

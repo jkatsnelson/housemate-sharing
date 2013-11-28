@@ -17,4 +17,4 @@ module.exports = App.LoginRoute = Ember.Route.extend
          # if the user was going somewhere, send them along, otherwise
          # default to `/posts`
         if transition then transition.retry()
-        else @transitionTo('posts')
+        else @transitionTo('receipts')
