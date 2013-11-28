@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Enter Receipt</h1>
+      <form {{action "addItem" on="submit"}}>
+        {{input value=category placeholder="What is this for?" name="category"}}
+        {{input value=price placeholder="How much was it?" name="price"}}
+        <button type=submit>Add</button>
+      </form>
+    </div>
+</div>
