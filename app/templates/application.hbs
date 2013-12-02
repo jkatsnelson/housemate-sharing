@@ -8,9 +8,6 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="#">Share</a>
-  {{#if isLoggedIn}}
-    <button {{action "logout"}}>Log Out</button>
-  {{/if}}
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,10 +15,13 @@
     <ul class="nav navbar-nav">
       <li>{{#link-to 'receipts'}}Enter Receipt{{/link-to}}</li>
       <li><a href="#">Check Totals</a></li>
+      {{#if isLoggedIn}}
+      <li><a href="#" {{action 'logout'}}>Log Out</a></li>
+      {{/if}}
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Make New Group</a></li>
+          <li>{{#link-to 'group'}}Make New Group{{/link-to}}</li>
           {{!-- <li class="divider"></li> --}}
           <li><a href="#">Customize Shares</a></li>
         </ul>

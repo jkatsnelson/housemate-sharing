@@ -11,3 +11,6 @@ module.exports = App.AuthRoute = Ember.Route.extend
       @transitionTo 'login'
     else
       @controllerFor('application').login()
+  model: ->
+    EmberFire.Object.create
+      ref: new Firebase("https://housemate-sharing.firebaseio.com/user/#{localStorage.authToken}")
